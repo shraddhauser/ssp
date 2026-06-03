@@ -88,32 +88,15 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #F5F7FA;
     padding: 20px;
     position: relative;
     overflow: hidden;
 }
 
-.login-page::before {
-    content: '';
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    background: rgba(255,255,255,0.05);
-    border-radius: 50%;
-    top: -200px;
-    right: -200px;
-}
-
+.login-page::before,
 .login-page::after {
-    content: '';
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    background: rgba(255,255,255,0.03);
-    border-radius: 50%;
-    bottom: -100px;
-    left: -100px;
+    display: none;
 }
 
 .login-container {
@@ -273,8 +256,6 @@ a:hover {
 
 .btn-primary:hover {
     background: var(--primary-dark);
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-    transform: translateY(-1px);
     color: white;
 }
 
@@ -285,7 +266,6 @@ a:hover {
 
 .btn-success:hover {
     background: #059669;
-    transform: translateY(-1px);
     color: white;
 }
 
@@ -296,7 +276,6 @@ a:hover {
 
 .btn-danger:hover {
     background: #DC2626;
-    transform: translateY(-1px);
     color: white;
 }
 
@@ -359,7 +338,6 @@ a:hover {
     display: flex;
     flex-direction: column;
     transition: var(--transition-slow);
-    box-shadow: var(--shadow-sm);
 }
 
 .sidebar-header {
@@ -525,7 +503,6 @@ a:hover {
     position: sticky;
     top: 0;
     z-index: 50;
-    box-shadow: var(--shadow-sm);
 }
 
 .top-navbar .page-title {
@@ -595,19 +572,12 @@ a:hover {
     background: var(--bg-white);
     border-radius: var(--radius-md);
     padding: 24px;
-    box-shadow: var(--shadow-sm);
     border: 1px solid var(--border);
     display: flex;
     align-items: flex-start;
     gap: 16px;
-    transition: var(--transition);
     position: relative;
     overflow: hidden;
-}
-
-.stat-card:hover {
-    box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
 }
 
 .stat-card .stat-icon {
@@ -659,7 +629,6 @@ a:hover {
 .card {
     background: var(--bg-white);
     border-radius: var(--radius-md);
-    box-shadow: var(--shadow-sm);
     border: 1px solid var(--border);
     margin-bottom: 24px;
     overflow: hidden;
@@ -794,7 +763,6 @@ a:hover {
     display: flex;
     align-items: center;
     gap: 10px;
-    animation: slideDown 0.3s ease;
     position: relative;
 }
 
@@ -924,12 +892,14 @@ a:hover {
 
 /* ---- SEARCH BAR ---- */
 .search-bar {
-    display: flex;
+    display: none !important;
     gap: 10px;
     margin-bottom: 20px;
 }
 
-.search-bar input {
+.search-bar input,
+.table-search-input {
+    display: none !important;
     flex: 1;
     padding: 10px 16px;
     border: 1.5px solid var(--border);
@@ -1068,7 +1038,51 @@ a:hover {
     }
 }
 
-/* ---- SCROLLBAR ---- */
+/* ---- SIMPLE STYLE OVERRIDES ---- */
+.simple-hide {
+    display: none !important;
+}
+
+.login-container,
+.card,
+.add-form-panel,
+.resource-card,
+.stat-card,
+.top-navbar,
+.alert,
+.sidebar {
+    box-shadow: none !important;
+}
+
+.btn,
+.btn-primary,
+.btn-success,
+.btn-danger,
+.btn-outline {
+    transition: none !important;
+}
+
+.btn:hover,
+.btn-primary:hover,
+.btn-success:hover,
+.btn-danger:hover,
+.btn-outline:hover {
+    transform: none !important;
+}
+
+.data-table tbody tr:hover {
+    background: rgba(0,0,0,0.03);
+}
+
+.login-logo .logo-icon {
+    box-shadow: none !important;
+}
+
+.resource-card:hover,
+.stat-card:hover {
+    box-shadow: none !important;
+    transform: none !important;
+}
 ::-webkit-scrollbar {
     width: 6px;
     height: 6px;

@@ -124,10 +124,7 @@
                                 <label>Designation *</label>
                                 <input type="text" name="designation" placeholder="Software Engineer" required>
                             </div>
-                            <div class="form-group">
-                                <label>Phone</label>
-                                <input type="text" name="phone" placeholder="9876543210">
-                            </div>
+                            <input type="hidden" name="phone" value="">
                         </div>
                         <div class="form-group" style="display:none;">
                             <label>Status</label>

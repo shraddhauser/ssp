@@ -97,10 +97,7 @@
                                     <option value="NETWORK">Network</option>
                                 </select>
                             </div>
-                            <div class="form-group">
-                                <label>IP Address</label>
-                                <input type="text" name="ipAddress" placeholder="e.g. 10.0.1.100">
-                            </div>
+                            <input type="hidden" name="ipAddress" value="">
                         </div>
                         <div class="form-row">
                             <div class="form-group">
@@ -118,14 +115,7 @@
                                     <option value="CRITICAL">Critical</option>
                                 </select>
                             </div>
-                            <div class="form-group">
-                                <label>Status</label>
-                                <select name="status">
-                                    <option value="ACTIVE">Active</option>
-                                    <option value="INACTIVE">Inactive</option>
-                                    <option value="MAINTENANCE">Maintenance</option>
-                                </select>
-                            </div>
+                            <input type="hidden" name="status" value="ACTIVE">
                         </div>
                         <div class="form-actions">
                             <button type="submit" class="btn btn-primary">&#x1F4BE; Save Resource</button>

@@ -109,8 +109,6 @@
             <div class="card">
                 <div class="card-header">
                     <h2><span class="header-icon">&#x1F511;</span> Current Access Grants (${accessList.size()})</h2>
-                    <input type="text" class="table-search-input" placeholder="&#x1F50D; Search..."
-                           style="padding:8px 14px; border:1.5px solid #E2E8F0; border-radius:6px; font-size:13px; width:240px; outline:none;">
                 </div>
                 <div class="card-body no-padding">
                     <div class="table-responsive">
